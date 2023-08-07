@@ -1,0 +1,9 @@
+# Exclude files with .log extension
+*.log
+
+# Exclude the node_modules directory
+node_modules
+
+# Exclude temporary and build files
+tmp/
+build/

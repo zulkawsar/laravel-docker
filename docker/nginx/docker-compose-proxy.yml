@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  nginx-proxy:
+    image: jwilder/nginx-proxy
+    networks:
+      - inkamapp-network
+    ports:
+      - "81:80"
+
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+
+# Docker network
+networks:
+  inkamapp-network:
+    external: true
