@@ -4,14 +4,15 @@ services:
   nginx-proxy:
     image: jwilder/nginx-proxy
     networks:
-      - inkamapp-network
+      - inkamapp_local
     ports:
-      - "81:80"
+      - "80:80"
 
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
 
 # Docker network
 networks:
-  inkamapp-network:
+  inkamapp_local:
     external: true
+

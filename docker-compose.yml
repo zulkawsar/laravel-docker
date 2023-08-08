@@ -1,11 +1,11 @@
 version: "3.9"
 
 services:
-    laravel-app:
+    laravellocal:
         build:
             context: .
             dockerfile: Dockerfile
-        container_name: laravel-app
+        container_name: laravellocal
         working_dir: /var/www//html
         volumes:
             - ./:/var/www/html
@@ -15,13 +15,14 @@ services:
             - VIRTUAL_HOST=laraveltest.local
             # Add other environment variables for your Laravel app here if needed
         networks:
-            - inkamapp-network
+            - inkamapp_local
 # Docker network
 networks:
-    inkamapp-network:
+    inkamapp_local:
         external: true
 
 #volumes
 volumes:
     dbdata:
         driver: local
+
