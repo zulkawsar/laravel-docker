@@ -17,7 +17,7 @@ RUN apt-get update && apt-get install -y build-essential libpng-dev libjpeg62-tu
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 
 # Copy custom Nginx configuration
-COPY /docker/nginx/laraveltest.local.conf /etc/nginx/sites-available/laraveltest.local.conf
+COPY /docker/nginx/laravel.local.conf /etc/nginx/sites-available/laravel.local.conf
 
 # Copy Laravel application files
 COPY . /var/www/html/

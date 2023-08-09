@@ -4,7 +4,7 @@ services:
   nginx-proxy:
     image: jwilder/nginx-proxy
     networks:
-      - inkamapp_local
+      - inkam_local
     ports:
       - "80:80"
 
@@ -13,6 +13,6 @@ services:
 
 # Docker network
 networks:
-  inkamapp_local:
+  inkam_local:
     external: true
 
